@@ -288,13 +288,12 @@ const situations = {
     title: "When You're Happy",
     desc: "Your happiness deserves to be celebrated!",
     video: "happy.mp4",
-    confetti: true,
   },
   motivation: {
     emoji: "💪",
     title: "When You Need Motivation",
     desc: "You're stronger than you think — watch this.",
-    video: "videos/motivation.mp4",
+    video: "nika.mp4",
   },
   stressed: {
     emoji: "😰",
