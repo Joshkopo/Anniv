@@ -81,16 +81,16 @@ canvas.height = window.innerHeight;
 let confettiActive = false;
 
 class Confetti {
-  constructor() {
-    this.x = Math.random() * canvas.width;
-    this.y = Math.random() * canvas.height - canvas.height;
-    this.size = Math.random() * 5 + 5;
-    this.speedY = Math.random() * 3 + 2;
-    this.speedX = Math.random() * 2 - 1;
-    this.color = `hsl(${Math.random() * 360}, 70%, 70%)`;
-    this.angle = Math.random() * 360;
-    this.rotationSpeed = Math.random() * 5 - 2.5;
-  }
+  // constructor() {
+  //   this.x = Math.random() * canvas.width;
+  //   this.y = Math.random() * canvas.height - canvas.height;
+  //   this.size = Math.random() * 5 + 5;
+  //   this.speedY = Math.random() * 3 + 2;
+  //   this.speedX = Math.random() * 2 - 1;
+  //   this.color = `hsl(${Math.random() * 360}, 70%, 70%)`;
+  //   this.angle = Math.random() * 360;
+  //   this.rotationSpeed = Math.random() * 5 - 2.5;
+  // }
 
   update() {
     this.y += this.speedY;
