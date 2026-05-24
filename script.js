@@ -8,15 +8,24 @@ const anniversaryDate = new Date("2022-05-24");
    ============================================================ */
 function updateCountdown() {
   const now = new Date();
-  const diff = now - anniversaryDate;
+  let years = now.getFullYear() - anniversaryDate.getFullYear();
+  let months = now.getMonth() - anniversaryDate.getMonth();
+  let days = now.getDate() - anniversaryDate.getDate();
 
-  const years = Math.floor(diff / (1000 * 60 * 60 * 24 * 365));
-  const months = Math.floor(
-    (diff % (1000 * 60 * 60 * 24 * 365)) / (1000 * 60 * 60 * 24 * 30),
-  );
-  const days = Math.floor(
-    (diff % (1000 * 60 * 60 * 24 * 30)) / (1000 * 60 * 60 * 24),
-  );
+  // Fix negative days
+  if (days < 0) {
+    months--;
+
+    const prevMonth = new Date(now.getFullYear(), now.getMonth(), 0);
+
+    days += prevMonth.getDate();
+  }
+
+  // Fix negative months
+  if (months < 0) {
+    years--;
+    months += 12;
+  }
 
   document.getElementById("years").textContent = years;
   document.getElementById("months").textContent = months;
@@ -366,3 +375,21 @@ function closeVideo() {
     if (videoWrapper) videoWrapper.innerHTML = "";
   }, 400);
 }
+window.addEventListener("DOMContentLoaded", () => {
+  const music = document.getElementById("bgMusic");
+
+  if (!music) return;
+
+  music.volume = 0.5;
+
+  const playMusic = async () => {
+    try {
+      await music.play();
+      console.log("Music playing");
+    } catch (err) {
+      console.log("Blocked by browser:", err);
+    }
+  };
+
+  playMusic();
+});

@@ -689,60 +689,6 @@ section {
 }
 
 /* ============================================================
-   Audio Player
-   ============================================================ */
-.audio-player {
-  background: var(--card-light);
-  border-radius: 20px;
-  padding: 2rem;
-  box-shadow: 0 10px 40px rgba(0, 0, 0, 0.08);
-  max-width: 600px;
-  margin: 0 auto;
-}
-
-.audio-item {
-  display: flex;
-  align-items: center;
-  gap: 1rem;
-  padding: 1rem;
-  border-radius: 10px;
-  transition: background 0.3s ease;
-  margin-bottom: 1rem;
-}
-
-.audio-item:hover {
-  background: rgba(255, 107, 157, 0.08);
-}
-
-.audio-icon {
-  font-size: 2rem;
-  color: var(--primary);
-  flex-shrink: 0;
-}
-
-.audio-info {
-  flex: 1;
-}
-
-.audio-title {
-  font-weight: 500;
-  color: var(--text-light);
-  margin-bottom: 0.25rem;
-}
-
-.audio-description {
-  font-size: 0.9rem;
-  color: var(--text-muted-light);
-  font-weight: 300;
-}
-
-audio {
-  width: 100%;
-  margin-top: 0.5rem;
-  border-radius: 50px;
-}
-
-/* ============================================================
    Video Cards — #videos section
    ============================================================ */
 .video-grid {
